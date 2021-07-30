@@ -61,16 +61,19 @@ header {
  * 자식요소 각각은 수평 정렬
  */
 
-.menu {
+ul.menu{
   float: left;
   color: white;
   font-size: 14px;
-  padding: 16px 0px;
+  padding: 8px 0px;
+  list-style: none;
+
 }
 
-.menu-item {
+ul li.menu-item {
   float: left;
-  padding: 5px 10px;
+  padding: 0px 10px;
+
 
 
 
@@ -103,22 +106,24 @@ header {
  *  : sign in, sign up 포함
  *  자식요소 각각은 수평 정렬
  */
-.sign {
+ul.sign {
   float: left;
   color: white;
   font-size: 15px;
-  padding: 18px 20px;
+  padding: 8px 20px;
+  list-style: none;
+
 
 }
 
-.sign-in {
+ul li.sign-in {
   float: left;
-  padding: 5px 15px;
+  padding: 0px 15px;
 }
 
 .sign-up {
   float: left;
-  padding: 4px 10px;
+  padding: 0px 10px;
   border: 2px solid white;
   border-radius: 7px;
 
@@ -136,4 +141,3 @@ header {
   display: block;
   clear: both;
 }
-
