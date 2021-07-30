@@ -4,32 +4,32 @@ body {
   background: linear-gradient(45deg, rgb(3, 34, 80), rgb(71, 31, 73));
 }
 
-/* -------------------------------
-  header
-  자식요소 
-  : container
----------------------------------- */
-.header {
+/** 
+ * * header
+ * 자식요소 
+ * : container
+ */
+header {
   background-color: transparent;
 }
 
-/* -------------------------------
-  container
-  자식요소 
-  : container-left, container-right
-  자식요소 각각은 수평 정렬
----------------------------------- */
+/** 
+ * * container
+ * 자식요소 
+ * : container-left, container-right
+ * 자식요소 각각은 수평 정렬
+ */
 .container {
   width: 1200px;
   margin: auto;
 }
 
-/* -------------------------------
-  container-left
-  자식요소
-  : logo, message, menu 포함
-  자식요소 각각은 수평 정렬
----------------------------------- */
+/** 
+ * * container-left
+ * 자식요소
+ * : logo, message, menu 포함
+ * 자식요소 각각은 수평 정렬
+ */
 .container-left {
   float: left;
   padding-top: 20px;
@@ -55,30 +55,36 @@ body {
   padding: 18px 15px;
 }
 
-/* -------------------------------
-  menu
-  자식요소: menu-item 5개 포함
-  자식요소 각각은 수평 정렬
----------------------------------- */
-.menu {
+/**
+ * * menu
+ * 자식요소: menu-item 5개 포함
+ * 자식요소 각각은 수평 정렬
+ */
+
+ul.menu{
   float: left;
   color: white;
   font-size: 14px;
-  padding: 16px 0px;
+  padding: 8px 0px;
+  list-style: none;
+
 }
 
-.menu-item {
+ul li.menu-item {
   float: left;
-  padding: 5px 10px;
+  padding: 0px 10px;
+
+
+
 
 }
 
-/* -------------------------------
-  container -right
-  자식요소
-  : serch sign 포함
-  자식요소 각각은 수평 정렬
----------------------------------- */
+/**
+ * * container -right
+ *  자식요소
+ *  : serch sign 포함
+ *  자식요소 각각은 수평 정렬
+ */
 .container-right {
   float: left;
   padding-top: 20px;
@@ -91,42 +97,45 @@ body {
   font-size: 15px;
   padding: 25px 20px;
   border-radius: 10px;
-  
+
 }
 
-/* -------------------------------
-  sign
-  자식요소
-  : sign in, sign up 포함
-  자식요소 각각은 수평 정렬
----------------------------------- */
-.sign {
+/**
+ * * sign
+ *  자식요소
+ *  : sign in, sign up 포함
+ *  자식요소 각각은 수평 정렬
+ */
+ul.sign {
   float: left;
   color: white;
   font-size: 15px;
-  padding: 18px 20px;
+  padding: 8px 20px;
+  list-style: none;
+
 
 }
 
-.sign-in {
+ul li.sign-in {
   float: left;
-  padding: 5px 15px;
+  padding: 0px 15px;
 }
 
 .sign-up {
   float: left;
-  padding: 4px 10px;
-  border:2px solid white;
+  padding: 0px 10px;
+  border: 2px solid white;
   border-radius: 7px;
+
 }
 
-/* -------------------------------
-  수평정렬을 위한 코드
-  수평정렬이 필요한 요소엔 모두
-  float: left; in CSS
-  그 요소들의 부모요소에 
-  class="clearfix" in HTML
----------------------------------- */
+/**
+ * * 수평정렬을 위한 코드
+ * 수평정렬이 필요한 요소엔 모두
+ * float: left; in CSS
+ * 그 요소들의 부모요소에 
+ * class="clearfix" in HTML
+*/
 .clearfix::after {
   content: "";
   display: block;
