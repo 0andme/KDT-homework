@@ -101,7 +101,7 @@ data = wb.active
 
 startRow = 3          # startRow : 메일링 대상자들의 이름 data가 시작되는 행 저장 변수
 maxRow = data.max_row # maxRow : 엑셀의 data가 끝나는 행 저장 변수
-# 메일 sub 제목
+# 메일 sub 제목 = subject에 해당
 sub_title= userKeyword +'에 대한 뉴스 정보 메일입니다' 
 
 # 엑셀 파일을 startRow 부터 maxRow까지 한 행씩 읽어 for문 실행
@@ -113,4 +113,3 @@ for row in data[startRow:maxRow]:
         userKeyword+'에 대한 뉴스 정보를 '+ row[1].value+'님께 엑셀 파일로 보내드립니다',
         userfileName )
 
-        
