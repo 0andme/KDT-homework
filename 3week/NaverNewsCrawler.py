@@ -39,6 +39,5 @@ class NaverNewsCrawler:
             print(e)
 
         print(f"{self.keyword}에 대한 기사 수집 완료")
-
-
-
+        
+        
