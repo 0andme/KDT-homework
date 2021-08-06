@@ -14,11 +14,9 @@ const data = [
 
 // 사용자 입력 받기
 const line = prompt("최대 금액을 입력해주세요.");
-const amount = +line;
-
+const amount = Number(line);
 // 주어진 금액으로 살 수 있는 가장 비싼 상품을 구함
-const item = getItemByAmount(data, amount);
-
+const item = getItemByAmount( );
 const msg = item
   ? `${amount}원으로 살 수 있는 가장 비싼 상품은 [${item.name}]이고, 가격은 ${item.price}원입니다.`
   : "살 수 있는 상품이 없습니다.";
@@ -27,17 +25,22 @@ const msg = item
 alert(msg);
 
 // getItemByAmount 함수
-function getItemByAmount(dataArray, userMoney) {
+function getItemByAmount( ) {
 
+  // 입력창에서 취소를 누르거나 엔터를 눌렀는지 확인
+  if (line === null || line === '' || line === ' ') {
+    return null;
+  }
   //사용자 입력값 userMoney가 숫자로만 이루어진 문자열인지 확인
-  if (isNaN(userMoney)){
+  else if (Number.isNaN(amount)){
+       
     return null;
   }
   else {
 
   //filter메서드 사용 - dataArray배열에서 사용자의 금액으로 구매가능한 상품만 itemlist 배열에 저장
-  const itemlist = dataArray.filter(
-    (product) => userMoney - product.price >= 0
+  const itemlist = data.filter(
+    (product) => amount - product.price >= 0
   );
 
   //itemlist를 금액 순으로 내림차순 정렬
