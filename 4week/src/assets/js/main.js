@@ -6,4 +6,3 @@ $submit &&
         alert("Great!");
     });
 
-    
